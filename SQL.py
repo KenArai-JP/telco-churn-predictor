@@ -1,19 +1,16 @@
 import pandas as pd
 import mysql.connector
 
-# Load the CSV file (update path if it's in Downloads or Desktop)
 df = pd.read_csv("netflix_titles.csv", encoding="utf-8")
 
-# Connect to MySQL
 conn = mysql.connector.connect(
     host="localhost",
     user="root",       
-    password="Ken4344088",   
+    password="",   
     database="netflix_db"
 )
 cursor = conn.cursor()
 
-# Insert rows into the table
 for _, row in df.iterrows():
     cursor.execute("""
         INSERT INTO netflix_titles (
