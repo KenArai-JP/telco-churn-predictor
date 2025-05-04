@@ -1,1 +1,0 @@
-# netflix-sql-explorer
